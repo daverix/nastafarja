@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafikverketFarjor.Web", "TrafikverketFarjor.Web\TrafikverketFarjor.Web.csproj", "{A0BEDCCE-F41C-4844-B365-FC333BBF1E2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafikverketFarjor", "TrafikverketFarjor\TrafikverketFarjor.csproj", "{BA67A195-DF35-4FC2-9312-7B052BD43385}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafikverketFarjor.Tests", "TrafikverketFarjor.Tests\TrafikverketFarjor.Tests.csproj", "{39C1F877-008A-4706-8927-1E3A7DD613C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0BEDCCE-F41C-4844-B365-FC333BBF1E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0BEDCCE-F41C-4844-B365-FC333BBF1E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0BEDCCE-F41C-4844-B365-FC333BBF1E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0BEDCCE-F41C-4844-B365-FC333BBF1E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA67A195-DF35-4FC2-9312-7B052BD43385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA67A195-DF35-4FC2-9312-7B052BD43385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA67A195-DF35-4FC2-9312-7B052BD43385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA67A195-DF35-4FC2-9312-7B052BD43385}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39C1F877-008A-4706-8927-1E3A7DD613C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39C1F877-008A-4706-8927-1E3A7DD613C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39C1F877-008A-4706-8927-1E3A7DD613C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39C1F877-008A-4706-8927-1E3A7DD613C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

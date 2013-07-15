@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FerryInfo>
+  <Name>Hönöleden</Name>
+  <Routes>
+    <Route>
+      <DepartsFrom>Hönö</DepartsFrom>
+      <ArrivesAt>Lilla Varholmen</ArrivesAt>
+      <Schedules>
+        <Schedule>
+          <DayOfWeek>Weekdays</DayOfWeek>
+          <Entry hour="00" values="25A 50" />
+          <Entry hour="01" values="50" />
+          <Entry hour="02" values="50" />
+          <Entry hour="03" values="50" />
+          <Entry hour="04" values="50" />
+          <Entry hour="05" values="10 20 30 40 50" />
+          <Entry hour="06" values="00 10 20 30 40 50" />
+          <Entry hour="07" values="00 10 20 30 40 50" />
+          <Entry hour="08" values="00 10 20 35 50" />
+          <Entry hour="09" values="05 20 35 50" />
+          <Entry hour="10" values="05 20 35 50" />
+          <Entry hour="11" values="05 20 35 50" />
+          <Entry hour="12" values="05 20 35 50" />
+          <Entry hour="13" values="05 20 35 50" />
+          <Entry hour="14" values="05 20 35 50" />
+          <Entry hour="15" values="05 15 25 35 45 55" />
+          <Entry hour="16" values="05 15 25 35 45 55" />
+          <Entry hour="17" values="05 15 25 35 45 55" />
+          <Entry hour="18" values="05 15 25 35 45 55" />
+          <Entry hour="19" values="05 20 50" />
+          <Entry hour="20" values="20 50" />
+          <Entry hour="21" values="20 50" />
+          <Entry hour="22" values="20 50" />
+          <Entry hour="23" values="50" />
+        </Schedule>
+        <Schedule>
+          <DayOfWeek>Weekends</DayOfWeek>
+          <Entry hour="00" values="25B 50" />
+          <Entry hour="01" values="50" />
+          <Entry hour="02" values="50" />
+          <Entry hour="03" values="50" />
+          <Entry hour="04" values="50" />
+          <Entry hour="05" values="50" />
+          <Entry hour="06" values="50" />
+          <Entry hour="07" values="20 50" />
+          <Entry hour="08" values="20 50" />
+          <Entry hour="09" values="20 50" />
+          <Entry hour="10" values="05C 20 35C 50" />
+          <Entry hour="11" values="05C 20 35C 50" />
+          <Entry hour="12" values="05C 20 35C 50" />
+          <Entry hour="13" values="05C 20 35C 50" />
+          <Entry hour="14" values="05C 20 35C 50" />
+          <Entry hour="15" values="05C 20 35C 50" />
+          <Entry hour="16" values="05C 20 35C 50" />
+          <Entry hour="17" values="05C 20 35C 50" />
+          <Entry hour="18" values="05C 20D 50" />
+          <Entry hour="19" values="20D 50" />
+          <Entry hour="20" values="20E 50" />
+          <Entry hour="21" values="20E 50" />
+          <Entry hour="22" values="20E 50" />
+          <Entry hour="23" values="50" />
+        </Schedule>
+      </Schedules>
+    </Route>
+    <Route>
+      <DepartsFrom>Lilla Varholmen</DepartsFrom>
+      <ArrivesAt>Hönö</ArrivesAt>
+      <Schedules>
+        <Schedule>
+          <DayOfWeek>Weekdays</DayOfWeek>
+          <Entry hour="00" values="10 40A" />
+          <Entry hour="01" values="10" />
+          <Entry hour="02" values="10" />
+          <Entry hour="03" values="10" />
+          <Entry hour="04" values="10" />
+          <Entry hour="05" values="05 25 35 45 55" />
+          <Entry hour="06" values="05 15 25 35 45 55" />
+          <Entry hour="07" values="05 15 25 35 45 55" />
+          <Entry hour="08" values="05 15 25 40 55" />
+          <Entry hour="09" values="10 25 40 55" />
+          <Entry hour="10" values="10 25 40 55" />
+          <Entry hour="11" values="10 25 40 55" />
+          <Entry hour="12" values="10 25 40 55" />
+          <Entry hour="13" values="10 25 40 55" />
+          <Entry hour="14" values="10 25 40 55" />
+          <Entry hour="15" values="10 20 30 40 50" />
+          <Entry hour="16" values="00 10 20 30 40 50" />
+          <Entry hour="17" values="00 10 20 30 40 50" />
+          <Entry hour="18" values="00 10 20 30 40 50" />
+          <Entry hour="19" values="00 10 25 40" />
+          <Entry hour="20" values="10 40" />
+          <Entry hour="21" values="10 40" />
+          <Entry hour="22" values="10 40" />
+          <Entry hour="23" values="10" />
+        </Schedule>
+        <Schedule>
+          <DayOfWeek>Weekends</DayOfWeek>
+          <Entry hour="00" values="10 40B" />
+          <Entry hour="01" values="10" />
+          <Entry hour="02" values="10" />
+          <Entry hour="03" values="10" />
+          <Entry hour="04" values="10" />
+          <Entry hour="05" values="10" />
+          <Entry hour="06" values="10" />
+          <Entry hour="07" values="10 40" />
+          <Entry hour="08" values="10 40" />
+          <Entry hour="09" values="10 40" />
+          <Entry hour="10" values="10 25C 40 55C" />
+          <Entry hour="11" values="10 25C 40 55C" />
+          <Entry hour="12" values="10 25C 40 55C" />
+          <Entry hour="13" values="10 25C 40 55C" />
+          <Entry hour="14" values="10 25C 40 55C" />
+          <Entry hour="15" values="10 25C 40 55C" />
+          <Entry hour="16" values="10 25C 40 55C" />
+          <Entry hour="17" values="10 25C 40 55C" />
+          <Entry hour="18" values="10 25C 40D" />
+          <Entry hour="19" values="10 40D" />
+          <Entry hour="20" values="10 40E" />
+          <Entry hour="21" values="10 40E" />
+          <Entry hour="22" values="10 40E" />
+          <Entry hour="23" values="10" />
+        </Schedule>
+      </Schedules>
+    </Route>
+  </Routes>
+  <Attributes>
+    <Attribute>
+      <Key>A</Key>
+      <Description>
+        Går endast tisdag - fredag.
+      </Description>
+      <Exclude>
+        <What>DayOfWeek</What>
+        <When>Monday</When>
+      </Exclude>
+    </Attribute>
+    <Attribute>
+      <Key>B</Key>
+      <Description>Går endast lördag (ej helgdag)</Description>
+      <Exclude>
+        <What>DayOfWeek</What>
+        <When>Sunday</When>
+      </Exclude>
+      <Exclude>
+        <What>DayOfWeek</What>
+        <When>Holiday</When>
+      </Exclude>
+    </Attribute>
+    <Attribute>
+      <Key>C</Key>
+      <Description>
+        Går ej 1/1, 24, 25 och 31/12
+      </Description>
+      <Exclude>
+        <What>FixedDate</What>
+        <When>1 january</When>
+      </Exclude>
+      <Exclude>
+        <What>FixedDate</What>
+        <When>24 december</When>
+      </Exclude>
+      <Exclude>
+        <What>FixedDate</What>
+        <When>25 december</When>
+      </Exclude>
+      <Exclude>
+        <What>FixedDate</What>
+        <When>31 december</When>
+      </Exclude>
+    </Attribute>
+    <Attribute>
+      <Key>D</Key>
+      <Description>
+        Går ej 24/12
+      </Description>
+      <Exclude>
+        <What>FixedDate</What>
+        <When>24 december</When>
+      </Exclude>
+    </Attribute>
+    <Attribute>
+      <Key>E</Key>
+      <Description>
+        Går ej 24, 25 och 31/12
+      </Description>
+      <Exclude>
+        <What>FixedDate</What>
+        <When>24 december</When>
+      </Exclude>
+      <Exclude>
+        <What>FixedDate</What>
+        <When>25 december</When>
+      </Exclude>
+      <Exclude>
+        <What>FixedDate</What>
+        <When>31 december</When>
+      </Exclude>
+    </Attribute>
+  </Attributes>
+  <Information>
+    <div>
+      <h1>Transporter vid olycks- och sjukdomsfall</h1>
+      <p>
+        Vid allvarligare olycks- eller sjukdomsfall som kräver omedelbar läkarvård, eller vid fara som kräver snabb åtgärd. Kontakta
+        färjeläget 0771-65 65 65.
+      </p>
+    </div>
+    <div>
+      <h1>Förtur</h1>
+      <p>
+        Förtur omfattar utryckningsfordon, räddningstjänst, tjänstgörande och utryckande polis och tull, kustbevakning, läkare, distriktssköterska, barnmorska eller veterinär (11 kapitlet 4§ Trafikförordningen). Förtur gäller även buss i linjetrafik, taxitrafik, skolskjuts
+        och färdtjänst. Tidtabellen kan även frångås vid väderstörningar
+        och transport av farligt gods.
+      </p>
+    </div>
+    <div>
+      <h1>Dubbleringstur</h1>
+      <p>
+        Dubbleringstur kan göras om inte alla trafikanter får plats på
+        ordinarie tur.
+      </p>
+    </div>
+    <div>
+      <h1>Farligt gods</h1>
+      <p>
+        Förare ska senast 1 timme före avgång informera befälhavaren
+        om farligt gods. 0771-65 65 65
+      </p>
+    </div>
+    <div>
+      <h1>Förbud mot rökning och bränslepåfyllning</h1>
+      <p>
+        Av säkerhetsskäl är det förbjudet att röka ombord (även i eget
+        fordon) samt förbjudet att fylla på bränsle till fordon m.m.
+      </p>
+    </div>
+    <div>
+      <h1>Lastning och lossning</h1>
+      <p>
+        Tyngre fordon placeras med hänsyn till vikt och utrymme. Följ
+        färjepersonalens anvisning vid lastning och lossning av färjan.
+      </p>
+    </div>
+  </Information>
+</FerryInfo>

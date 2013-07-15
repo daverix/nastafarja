@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FerryInfo>
+  <Name>Kornhallsleden</Name>
+  <Routes>
+    <Route>
+      <Title>Kornhall-Gunnesby-Kornhall*</Title>
+      <DepartsFrom>Kornhall</DepartsFrom>
+      <ArrivesAt>Gunnesby</ArrivesAt>
+      <Schedules>
+        <Schedule>
+          <DayOfWeek>Weekdays</DayOfWeek>
+          <Entry hour="00" values="         35    55" />
+          <Entry hour="01" values="               55A" />
+          <Entry hour="02" values="                  " />
+          <Entry hour="03" values="               55A" />
+          <Entry hour="04" values="      25A      55" />
+          <Entry hour="05" values="10    25    40 55" />
+          <Entry hour="06" values="10    25    40 55" />
+          <Entry hour="07" values="10    25    40 55" />
+          <Entry hour="08" values="10    25    40 55" />
+          <Entry hour="09" values="      25    40 55" />
+          <Entry hour="10" values="   15    35    55" />
+          <Entry hour="11" values="   15    35    55" />
+          <Entry hour="12" values="   15    35    55" />
+          <Entry hour="13" values="   15    35    55" />
+          <Entry hour="14" values="10    20       50" />
+          <Entry hour="15" values="10    25    40 50" />
+          <Entry hour="16" values="10    25    40 55" />
+          <Entry hour="17" values="10    25    40 55" />
+          <Entry hour="18" values="10    25    40 55" />
+          <Entry hour="19" values="   15    35    55" />
+          <Entry hour="20" values="   15    35    55" />
+          <Entry hour="21" values="   15    35    55" />
+          <Entry hour="22" values="      25       55" />
+          <Entry hour="23" values="      25       55" />
+        </Schedule>
+        <Schedule>
+          <DayOfWeek>Weekends</DayOfWeek>
+          <Entry hour="00" values="         35    55" />
+          <Entry hour="01" values="               55A" />
+          <Entry hour="02" values="                  " />
+          <Entry hour="03" values="               55A" />
+          <Entry hour="04" values="      25A      55" />
+          <Entry hour="05" values="      25       55" />
+          <Entry hour="06" values="      25       55" />
+          <Entry hour="07" values="      25       55" />
+          <Entry hour="08" values="      25       55" />
+          <Entry hour="09" values="   15    35    55" />
+          <Entry hour="10" values="   15    35    55" />
+          <Entry hour="11" values="   15    35    55" />
+          <Entry hour="12" values="   15    35    55" />
+          <Entry hour="13" values="   15    35    55" />
+          <Entry hour="14" values="   15    35    55" />
+          <Entry hour="15" values="   15    35    55" />
+          <Entry hour="16" values="   15    35    55" />
+          <Entry hour="17" values="   15    35    55" />
+          <Entry hour="18" values="10          40 55" />
+          <Entry hour="19" values="   15    35    55" />
+          <Entry hour="20" values="   15    35    55" />
+          <Entry hour="21" values="   15    35    55" />
+          <Entry hour="22" values="      25       55" />
+          <Entry hour="23" values="      25       55" />
+        </Schedule>
+      </Schedules>
+    </Route>
+  </Routes>
+  <Attributes>
+    <Attribute>
+      <Key>A</Key>
+      <Description>Går endast efter kallelse.</Description>
+    </Attribute>
+    <Attribute>
+      <Key>*</Key>
+      <Description>Returresa från Gunnesby genomförs direkt efter lossning och lastning.</Description>
+    </Attribute>
+  </Attributes>
+  <Information>
+    <div>
+      <h1>Helgtrafik</h1>
+      <p>Midsommarafton, julafton och nyårsafton körs som lördagstrafik.</p>
+    </div>
+    <div>
+      <h1>Olycks- och sjukdomsfall</h1>
+      <p>Vid nödfall eller olyckor, ring räddningstjänsten 112.</p>
+    </div>
+    <div>
+      <h1>Förtur och tillfälliga hinder</h1>
+      <p>
+        Utryckningsfordon, kollektivtrafik och taxi har 
+        förtur. Tidtabellen kan tillfälligt ändras på grund 
+        av väderlek, vattenstånd och korsande sjötrafik. 
+        Vid behov kan färjeturen dubbleras.
+      </p>
+    </div>
+    <div>
+      <h1>Kallelsetur</h1>
+      <p>
+        Kallelseturer (märkta A) måste beställas. Använd 
+        ringledning vid färjeläget eller ring 0771-65 65 65 
+        och ange ledens namn, tidigast 10 minuter före 
+        avgång.
+      </p>
+    </div>
+    <div>
+      <h1>Farligt gods</h1>
+      <p>Informera befälhavaren 1 timme före avgång. 
+Ring 0771-65 65 65 och ange ledens namn.</p>
+    </div>
+    <div>
+      <h1>Förbud</h1>
+      <p>Rökning och bränslepåfyllning förbjudet ombord.</p>
+    </div>
+  </Information>
+</FerryInfo>
