@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using NUnit.Framework;
 
 namespace TrafikverketFarjor.Tests
@@ -12,6 +13,45 @@ namespace TrafikverketFarjor.Tests
         public void SetUp()
         {
             _sut = FerryInfo.GetInfo("Hönöleden");
+        }
+
+        [Test]
+        [Ignore("Not a test. Prints to console output for inspection.")]
+        public void PrintNext10Departures()
+        {
+            var route = _sut.GetRoute("Hönö");
+            var dateTime = DateTime.Now;
+            for (var i = 0; i < 10; i++)
+            {
+                var next = route.NextDeparture(dateTime);
+                Console.WriteLine(next.Departs);
+                dateTime = (dateTime.Date + next.Departs).AddMinutes(1);
+            }
+        }
+
+        [Test]
+        public void NextDeparture_Take10()
+        {
+            // Arrange
+            var route = _sut.GetRoute("Hönö");
+
+            // Act
+            var actual = route.NextDeparture(new DateTime(2013, 07, 17, 09, 20, 00, 001), 10);
+
+            // Assert
+            Assert.That(actual.Select(s => s.Departs).ToArray(), Is.EqualTo(new[]
+                {
+                    new TimeSpan(09, 35, 00),
+                    new TimeSpan(09, 50, 00),
+                    new TimeSpan(10, 05, 00),
+                    new TimeSpan(10, 20, 00),
+                    new TimeSpan(10, 35, 00),
+                    new TimeSpan(10, 50, 00),
+                    new TimeSpan(11, 05, 00),
+                    new TimeSpan(11, 20, 00),
+                    new TimeSpan(11, 35, 00),
+                    new TimeSpan(11, 50, 00),
+                }));
         }
 
         [Test]

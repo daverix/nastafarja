@@ -24,20 +24,28 @@ namespace TrafikverketFarjor
         {
             if (schedule == null) throw new ArgumentNullException("schedule");
             _schedules.Add(schedule);
+            _schedules.SortBy(s => s.Departs);
         }
 
         public IEnumerable<FerrySchedule> GetSchedule(DateTime dateTime)
         {
             return _schedules
                 .Where(s => (s.DayOfWeek & GetDayOfWeek(dateTime)) != 0)
-                .Where(s => !_ferryInfo.Attributes.Any(a => a.Key == s.Attribute && a.Rules.Any(r => r.IsExcluded(dateTime))))
-                .OrderBy(s => s.Departs);
+                .Where(s => !_ferryInfo.Attributes.Any(a => a.Key == s.Attribute && a.Rules.Any(r => r.IsExcluded(dateTime))));
         }
 
         public FerrySchedule NextDeparture(DateTime dateTime)
         {
+            return NextDeparture(dateTime, 1).FirstOrDefault();
+        }
+
+        public IEnumerable<FerrySchedule> NextDeparture(DateTime dateTime, int count)
+        {
+            if (count < 1) throw new ArgumentOutOfRangeException("count", count, "Count must be equal to or greater than 1.");
+
             return GetSchedule(dateTime)
-                .FirstOrDefault(s => s.Departs >= dateTime.TimeOfDay);
+                .Where(s => s.Departs >= dateTime.TimeOfDay)
+                .Take(count);
         }
 
         private static ScheduleDayOfWeek GetDayOfWeek(DateTime dateTime)

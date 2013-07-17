@@ -22,6 +22,16 @@ namespace TrafikverketFarjor.Tests
         }
 
         [Test]
+        public void GetAll()
+        {
+            // Act
+            var actual = FerryInfo.GetAll();
+
+            // Assert
+            Assert.That(actual.Count(), Is.GreaterThan(1));
+        }
+
+        [Test]
         public void Kornhallsleden()
         {
             var actual = FerryInfo.GetInfo("Kornhallsleden");

@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="FerryInfoTests.cs" />
     <Compile Include="FerryInfoTestsHönöleden.cs" />
+    <Compile Include="OrderByTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
