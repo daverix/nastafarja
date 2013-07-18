@@ -27,15 +27,24 @@ namespace TrafikverketFarjor.Web.api._1._0
                     return Response.AsJson(model);
                 };
 
-            Get[apiPrefix + "ferrys"] = _ =>
+            Get[apiPrefix + "info/{infoName?}"] = _ =>
                 {
-                    var model = FerryInfo.GetAll().Select(i => new
+                    var selection = FerryInfo.GetAll();
+                    if (!string.IsNullOrWhiteSpace(_.infoName))
+                    {
+                        selection = selection.Where(info => info.Name == _.infoName);
+                    }
+
+                    var model = new
                         {
-                            i.Name,
-                            i.Region,
-                            i.Url,
-                            DepartsFrom = i.Routes.Select(r => r.DepartsFrom)
-                        });
+                            Info = selection.Select(i => new
+                                {
+                                    i.Name,
+                                    i.Region,
+                                    i.Url,
+                                    DepartsFrom = i.Routes.Select(r => r.DepartsFrom)
+                                })
+                        };
 
                     return Response.AsJson(model);
                 };
