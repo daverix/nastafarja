@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using Nancy;
 
@@ -35,6 +36,39 @@ namespace TrafikverketFarjor.Web.api._1._0
                             i.Url,
                             DepartsFrom = i.Routes.Select(r => r.DepartsFrom)
                         });
+
+                    return Response.AsJson(model);
+                };
+
+            Get[apiPrefix + "nextDeparture/{infoName}/{departsFrom?}"] = _ =>
+                {
+                    string infoName = _.infoName;
+                    string departsFrom = _.departsFrom;
+
+                    var info = FerryInfo.GetInfo(infoName);
+                    if (info == null) return HttpStatusCode.NotFound;
+
+                    var route = !string.IsNullOrWhiteSpace(departsFrom)
+                        ? info.GetRoute(departsFrom)
+                        : info.Routes.FirstOrDefault();
+
+                    if (route == null) return HttpStatusCode.NotFound;
+                    var now = DateTime.Now;
+                    int count = !Request.Query.count ? 10 : Request.Query.count;
+
+                    var model = new
+                        {
+                            info.Name,
+                            route.Title,
+                            route.DepartsFrom,
+                            route.ArrivesAt,
+                            NextDepartures = route.NextDeparture(now, count)
+                            .Select(s => new
+                                {
+                                    TimeOfDay = s.Departs.ToString(),
+                                    s.Attribute,
+                                })
+                        };
 
                     return Response.AsJson(model);
                 };
