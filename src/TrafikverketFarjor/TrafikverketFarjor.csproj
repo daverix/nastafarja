@@ -62,14 +62,32 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FerryInfos\Kornhallsleden.xml">
+    <EmbeddedResource Include="FerryInfos\VästraGötaland\12-Kornhallsleden.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FerryInfos\Hönöleden.xml">
+    <EmbeddedResource Include="FerryInfos\VästraGötaland\11-Hönöleden.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FerryInfos\VästraGötaland\01-Sund Jarenleden.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FerryInfos\VästraGötaland\02-Hamburgsundsleden.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FerryInfos\VästraGötaland\03-Bohus Malmönleden.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FerryInfos\README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

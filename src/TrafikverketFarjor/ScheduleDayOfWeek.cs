@@ -15,6 +15,7 @@ namespace TrafikverketFarjor
         Holiday = 128,
 
         Weekdays = Monday|Tuesday|Wednesday|Thursday|Friday,
-        Weekends = Saturday|Sunday|Holiday
+        Weekends = Saturday|Sunday|Holiday,
+        Everyday = Weekdays|Weekends,
     }
 }

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FerryInfo>
+  <Name>Hamburgsundsleden</Name>
+  <Region>Västra Götaland</Region>
+  <Url>http://www.trafikverket.se/Farja/Farjeleder/Farjeleder-i-ditt-lan/Farjeleder-i-Vastra-Gotaland1/Hamburgsundleden/</Url>
+  <Routes>
+    <Route>
+      <Title>Hamburgö-Hamburgsund-Hamburgö*</Title>
+      <DepartsFrom>Hamburgö</DepartsFrom>
+      <ArrivesAt>Hamburgsund</ArrivesAt>
+      <Schedules>
+        <Schedule>
+          <DayOfWeek>Everyday</DayOfWeek>
+          <Entry hour="00" values="00A     30A" />
+          <Entry hour="01" values="00A" />
+          <Entry hour="02" values="00A" />
+          <Entry hour="03" values="00A" />
+          <Entry hour="04" values="00A" />
+          <Entry hour="05" values="00A     30A" />
+          <Entry hour="06" values="00B 20B     40B" />
+          <Entry hour="07" values="00B 20B     40B" />
+          <Entry hour="08" values="00  20      40" />
+          <Entry hour="09" values="00  20      40" />
+          <Entry hour="10" values="00  20      40" />
+          <Entry hour="11" values="00  20      40" />
+          <Entry hour="12" values="00  20      40" />
+          <Entry hour="13" values="00  20      40" />
+          <Entry hour="14" values="00  20      40" />
+          <Entry hour="15" values="00  20      40" />
+          <Entry hour="16" values="00  20      40" />
+          <Entry hour="17" values="00  20      40" />
+          <Entry hour="18" values="00  20      40" />
+          <Entry hour="19" values="00  20      40" />
+          <Entry hour="20" values="00  20      40" />
+          <Entry hour="21" values="00  20      40" />
+          <Entry hour="22" values="00A 20A     40A" />
+          <Entry hour="23" values="00A     30A" />
+        </Schedule>
+      </Schedules>
+    </Route>
+  </Routes>
+  <Attributes>
+    <Attribute>
+      <Key>A</Key>
+      <Description>Går endast efter kallelse.</Description>
+    </Attribute>
+    <Attribute>
+      <Key>B</Key>
+      <Description>Går endast efter kallelse lördag, söndag och helgdag.</Description>
+    </Attribute>
+    <Attribute>
+      <Key>*</Key>
+      <Description>Returresa från Hamburgsund genomförs direkt efter lossning och lastning.</Description>
+    </Attribute>
+  </Attributes>
+</FerryInfo>

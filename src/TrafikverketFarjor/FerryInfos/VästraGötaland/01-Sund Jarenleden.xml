@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FerryInfo>
+  <Name>Sund Jarenleden</Name>
+  <Region>Västra Götaland</Region>
+  <Url>http://www.trafikverket.se/Farja/Farjeleder/Farjeleder-i-ditt-lan/Farjeleder-i-Vastra-Gotaland1/SundJarenleden/</Url>
+  <Routes>
+    <Route>
+      <DepartsFrom>Sund</DepartsFrom>
+      <ArrivesAt>Jaren</ArrivesAt>
+      <Schedules>
+        <Schedule>
+          <DayOfWeek>Everyday</DayOfWeek>
+          <Entry hour="00" values="00A" />
+          <Entry hour="01" values="00A" />
+          <Entry hour="02" values="00A" />
+          <Entry hour="03" values="00A" />
+          <Entry hour="04" values="00A" />
+          <Entry hour="05" values="00A" />
+          <Entry hour="06" values="00A 30A" />
+          <Entry hour="07" values="00A" />
+          <Entry hour="08" values="00A 30A" />
+          <Entry hour="09" values="00A" />
+          <Entry hour="10" values="00A 30A" />
+          <Entry hour="11" values="00 30A" />
+          <Entry hour="12" values="00 30A" />
+          <Entry hour="13" values="00 30A" />
+          <Entry hour="14" values="00 30A" />
+          <Entry hour="15" values="00 30A" />
+          <Entry hour="16" values="00 30A" />
+          <Entry hour="17" values="00 30A" />
+          <Entry hour="18" values="00" />
+          <Entry hour="19" values="00A" />
+          <Entry hour="20" values="00A" />
+          <Entry hour="21" values="00A" />
+          <Entry hour="22" values="00A" />
+          <Entry hour="23" values="00A" />
+        </Schedule>
+      </Schedules>
+    </Route>
+    <Route>
+      <DepartsFrom>Jaren</DepartsFrom>
+      <ArrivesAt>Sund</ArrivesAt>
+      <Schedules>
+        <Schedule>
+          <DayOfWeek>Everyday</DayOfWeek>
+          <Entry hour="00" values="10A" />
+          <Entry hour="01" values="10A" />
+          <Entry hour="02" values="10A" />
+          <Entry hour="03" values="10A" />
+          <Entry hour="04" values="10A" />
+          <Entry hour="05" values="10A" />
+          <Entry hour="06" values="10A 40A" />
+          <Entry hour="07" values="10A" />
+          <Entry hour="08" values="10A 40A" />
+          <Entry hour="09" values="10A" />
+          <Entry hour="10" values="10A 40A" />
+          <Entry hour="11" values="10 40A" />
+          <Entry hour="12" values="10 40A" />
+          <Entry hour="13" values="10 40A" />
+          <Entry hour="14" values="10 40A" />
+          <Entry hour="15" values="10 40A" />
+          <Entry hour="16" values="10 40A" />
+          <Entry hour="17" values="10 40A" />
+          <Entry hour="18" values="10" />
+          <Entry hour="19" values="10A" />
+          <Entry hour="20" values="10A" />
+          <Entry hour="21" values="10A" />
+          <Entry hour="22" values="10A" />
+          <Entry hour="23" values="10A" />
+        </Schedule>
+      </Schedules>
+    </Route>
+  </Routes>
+  <Attributes>
+    <Attribute>
+      <Key>A</Key>
+      <Description>Går endast efter kallelse.</Description>
+    </Attribute>
+  </Attributes>
+</FerryInfo>

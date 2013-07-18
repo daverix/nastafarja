@@ -15,6 +15,8 @@ namespace TrafikverketFarjor
             var result = new FerryInfo();
             var xinfo = GetExpectedElement(xdoc, "FerryInfo");
             result.Name = GetExpectedElement(xinfo, "Name").Value;
+            result.Region = xinfo.Elements("Region").Select(x => x.Value).FirstOrDefault();
+            result.Url = xinfo.Elements("Url").Select(x => x.Value).FirstOrDefault();
             var xroutes = GetExpectedElement(xinfo, "Routes");
             foreach (var xroute in xroutes.Elements("Route"))
             {

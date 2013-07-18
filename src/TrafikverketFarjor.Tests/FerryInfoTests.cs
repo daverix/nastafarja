@@ -7,9 +7,25 @@ namespace TrafikverketFarjor.Tests
     [TestFixture]
     public class FerryInfoTests
     {
+        [TearDown]
+        public void ClearCache()
+        {
+            FerryInfo.ClearCache();
+        }
+
         [Test]
-        [TestCase("Kornhallsleden")]
+        [TestCase("Sund Jarenleden")]
+        [TestCase("Hamburgsundsleden")]
+        [TestCase("Bohus Malmönleden")]
+        [TestCase("Ängöleden")]
+        [TestCase("Malöleden")]
+        [TestCase("Gullmarsleden")]
+        [TestCase("Lyreleden")]
+        [TestCase("Svanesundsleden")]
+        [TestCase("Nordöleden")]
+        [TestCase("Björköleden")]
         [TestCase("Hönöleden")]
+        [TestCase("Kornhallsleden")]
         public void GetInfo(string name)
         {
             // Act

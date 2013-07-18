@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FerryInfo>
+  <Name>Bohus Malmönleden</Name>
+  <Region>Västra Götaland</Region>
+  <Url>http://www.trafikverket.se/Farja/Farjeleder/Farjeleder-i-ditt-lan/Farjeleder-i-Vastra-Gotaland1/BohusMalmonleden/</Url>
+  <Routes>
+    <Route>
+      <Title>Malmön-Tullboden-Malmön*</Title>
+      <DepartsFrom>Malmön</DepartsFrom>
+      <ArrivesAt>Tullboden</ArrivesAt>
+      <Schedules>
+        <Schedule>
+          <DayOfWeek>Weekdays</DayOfWeek>
+          <Entry hour="00" values="00A" />
+          <Entry hour="01" values="00A" />
+          <Entry hour="02" values="00A" />
+          <Entry hour="03" values="00A" />
+          <Entry hour="04" values="00A" />
+          <Entry hour="05" values="00  30" />
+          <Entry hour="06" values="00  30" />
+          <Entry hour="07" values="00  30" />
+          <Entry hour="08" values="00  30" />
+          <Entry hour="09" values="00  30" />
+          <Entry hour="10" values="00  30" />
+          <Entry hour="11" values="00  30" />
+          <Entry hour="12" values="00  30" />
+          <Entry hour="13" values="00  30" />
+          <Entry hour="14" values="00  30" />
+          <Entry hour="15" values="00  30" />
+          <Entry hour="16" values="00  30" />
+          <Entry hour="17" values="00  30" />
+          <Entry hour="18" values="00  30" />
+          <Entry hour="19" values="00  30" />
+          <Entry hour="20" values="00  30" />
+          <Entry hour="21" values="00A 30A" />
+          <Entry hour="22" values="00A 30A" />
+          <Entry hour="23" values="00A 30A" />
+        </Schedule>
+        <Schedule>
+          <DayOfWeek>Weekends</DayOfWeek>
+          <Entry hour="00" values="00A" />
+          <Entry hour="01" values="00A" />
+          <Entry hour="02" values="00A" />
+          <Entry hour="03" values="00A" />
+          <Entry hour="04" values="00A" />
+          <Entry hour="05" values="00A" />
+          <Entry hour="06" values="00A 30A" />
+          <Entry hour="07" values="00A 30A" />
+          <Entry hour="08" values="00A 30A" />
+          <Entry hour="09" values="00  30" />
+          <Entry hour="10" values="00  30" />
+          <Entry hour="11" values="00  30" />
+          <Entry hour="12" values="00  30" />
+          <Entry hour="13" values="00  30" />
+          <Entry hour="14" values="00  30" />
+          <Entry hour="15" values="00  30" />
+          <Entry hour="16" values="00  30" />
+          <Entry hour="17" values="00  30" />
+          <Entry hour="18" values="00  30" />
+          <Entry hour="19" values="00  30" />
+          <Entry hour="20" values="00  30" />
+          <Entry hour="21" values="00A 30A" />
+          <Entry hour="22" values="00A 30A" />
+          <Entry hour="23" values="00A 30A" />
+        </Schedule>
+      </Schedules>
+    </Route>
+  </Routes>
+  <Attributes>
+    <Attribute>
+      <Key>A</Key>
+      <Description>Går endast efter kallelse.</Description>
+    </Attribute>
+    <Attribute>
+      <Key>*</Key>
+      <Description>Avgår från Tullboden som vändande färja. Normalt 10 minuter efter avgång från Bohus-Malmön.</Description>
+    </Attribute>
+  </Attributes>
+</FerryInfo>

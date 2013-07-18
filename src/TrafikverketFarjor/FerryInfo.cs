@@ -10,7 +10,6 @@ namespace TrafikverketFarjor
     {
         private static readonly object SyncRoot = new object();
         private static readonly Dictionary<string, FerryInfo> Cache = new Dictionary<string, FerryInfo>();
-        private static bool _allHasBeenCached;
 
         private readonly IDictionary<string, string> _info = new Dictionary<string, string>();
         private readonly IList<FerryInfoAttribute> _attributes = new List<FerryInfoAttribute>();
@@ -19,14 +18,10 @@ namespace TrafikverketFarjor
         {
             lock (SyncRoot)
             {
+                if (Cache.Count < 1) RefreshCache();
+
                 FerryInfo result;
-                if (Cache.TryGetValue(name, out result))
-                    return result;
-
-                result = CreateFromManifestResourceByName(name);
-                if (result == null) return null;
-
-                Cache.Add(name, result);
+                Cache.TryGetValue(name, out result);
                 return result;
             }
         }
@@ -35,19 +30,25 @@ namespace TrafikverketFarjor
         {
             lock (SyncRoot)
             {
-                if (_allHasBeenCached) return Cache.Values;
+                if (Cache.Count < 1) RefreshCache();
+                return Cache.Values;
+            }
+        }
 
-                var type = typeof (FerryInfo);
-                var result = type.Assembly.GetManifestResourceNames()
-                                 .Select(resourceName =>
-                                     {
-                                         var match = Regex.Match(resourceName, @"FerryInfos\.(.*)\.xml$");
-                                         return match.Success ? match.Groups[1].Value : null;
-                                     })
-                                 .Where(name => !string.IsNullOrWhiteSpace(name))
-                                 .Select(name => GetInfo(name));
-                _allHasBeenCached = true;
-                return result;
+        public static void RefreshCache()
+        {
+            lock (SyncRoot)
+            {
+                ClearCache();
+                FindAndCreateFromManifestResources(info => Cache.Add(info.Name, info));
+            }
+        }
+
+        public static void ClearCache()
+        {
+            lock (SyncRoot)
+            {
+                Cache.Clear();
             }
         }
 
@@ -57,10 +58,23 @@ namespace TrafikverketFarjor
             return XmlReader().Read(stream);
         }
 
-        private static FerryInfo CreateFromManifestResourceByName(string name)
+        private static void FindAndCreateFromManifestResources(Action<FerryInfo> forEach)
+        {
+            var type = typeof(FerryInfo);
+            foreach (var resourceName in type.Assembly.GetManifestResourceNames())
+            {
+                if (!Regex.IsMatch(resourceName, @"FerryInfos\..*\.xml$"))
+                    continue;
+
+                var info = CreateFromManifestResource(resourceName);
+                forEach(info);
+            }
+        }
+
+        private static FerryInfo CreateFromManifestResource(string resourceName)
         {
             var type = typeof (FerryInfo);
-            using (var stream = type.Assembly.GetManifestResourceStream(typeof(FerryInfo), string.Format("FerryInfos.{0}.xml", name)))
+            using (var stream = type.Assembly.GetManifestResourceStream(resourceName))
             {
                 return stream == null ? null : Create(stream);
             }
@@ -89,8 +103,8 @@ namespace TrafikverketFarjor
             get { return _info; }
         }
 
-        public string DepartsFrom { get; set; }
-        public string ArrivesAt { get; set; }
+        public string Region { get; set; }
+        public string Url { get; set; }
 
         public FerryRoute GetRoute(string departsFrom)
         {

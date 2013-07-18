@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FerryInfo>
   <Name>Hönöleden</Name>
+  <Region>Västra Götaland</Region>
+  <Url>http://www.trafikverket.se/Farja/Farjeleder/Farjeleder-i-ditt-lan/Farjeleder-i-Vastra-Gotaland1/Honoleden/</Url>
   <Routes>
     <Route>
       <DepartsFrom>Hönö</DepartsFrom>

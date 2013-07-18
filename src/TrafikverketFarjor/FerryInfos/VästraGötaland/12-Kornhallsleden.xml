@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FerryInfo>
   <Name>Kornhallsleden</Name>
+  <Region>Västra Götaland</Region>
+  <Url>http://www.trafikverket.se/Farja/Farjeleder/Farjeleder-i-ditt-lan/Farjeleder-i-Vastra-Gotaland1/Kornhallsleden/</Url>
   <Routes>
     <Route>
       <Title>Kornhall-Gunnesby-Kornhall*</Title>

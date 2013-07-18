@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv">
+<head>
+    <title>Nästa Färja</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" href="../Content/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../Content/bootstrap-responsive.min.css" />
+</head>
+<body>
+    <div class="container">
+        <form>
+            <fieldset>
+                <legend>Nästa Färja</legend>
+                <div>
+                    <label for="ferryInfo">Färjeled</label>
+                    <select id="ferryInfo">
+                        <option>Hönöleden</option>
+                        <option>Kornhallsleden</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ferryRoute">Avgår från</label>
+                    <select id="ferryRoute">
+                        <option>Hönö</option>
+                        <option>Lilla Varholmen</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+        <div>
+            @System.DateTime.Now.ToString(@"\Det är nu dddd \den dd MMMM, oc\h klockan är HH:mm")
+        </div>
+        <div>
+            <div>
+                <h2>10:35</h2>
+                <span style="color: gray">Avgår om 14 minuter</span>
+            </div>
+            <div>
+                <h3>10:50</h3>
+                <span style="color: gray">Avgår om 29 minuter</span>
+            </div>
+            <h3>10:50</h3>
+            <h4>11:05</h4>
+            <h4>11:20</h4>
+            <h4>11:35</h4>
+            <h4>11:50</h4>
+        </div>
+    </div>
+    
+    <div id="Scripts">
+        <script type="text/javascript" src="../Scripts/jquery-2.0.2.min.js"></script>
+        <script type='text/javascript' src='../Scripts/knockout-2.3.0.js'></script>
+        <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
+    </div>
+</body>
+</html>
