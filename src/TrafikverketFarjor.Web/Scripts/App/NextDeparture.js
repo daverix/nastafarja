@@ -6,11 +6,14 @@
     self.selectedFerryInfo = ko.observable();
     self.selectedFerryRoute = ko.observable();
     self.nextDepartures = ko.observableArray();
+    self.version = ko.observable();
 
     self.updateFerryRouteList = function() {
         var selectedFerryInfo = self.selectedFerryInfo();
         if (selectedFerryInfo) {
             self.ferryRoutes(selectedFerryInfo.DepartsFrom());
+        } else {
+            self.ferryRoutes([]);
         }
     };
 
@@ -41,5 +44,10 @@
                 infos.push(ko.mapping.fromJS(it));
             });
             self.ferryInfos(infos);
+        });
+
+    $.get("/api/1.0/version")
+        .done(function(data) {
+            self.version(ko.mapping.fromJS(data));
         });
 }

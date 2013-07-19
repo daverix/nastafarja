@@ -8,38 +8,56 @@
     <link rel="stylesheet" href="../Content/bootstrap.min.css"/>
     <link rel="stylesheet" href="../Content/bootstrap-responsive.min.css" />
 </head>
-<body>
-    <div class="container">
-        <form>
-            <fieldset>
-                <legend>Nästa Färja</legend>
-                <div>
-                    <label for="ferryInfo">Färjeled</label>
-                    <select id="ferryInfo" data-bind="options: ferryInfos, optionsText: 'Name', value: selectedFerryInfo, optionsCaption: 'Välj färjeled...', event: { change: updateFerryRouteList }"></select>
-                </div>
-                <div>
-                    <label for="ferryRoute">Avgår från</label>
-                    <select id="ferryRoute" data-bind="options: ferryRoutes, value: selectedFerryRoute, optionsCaption: 'Välj färjeläger...', event: { change: getNextDepartures }"></select>
-                </div>
-            </fieldset>
-        </form>
-        <ul data-bind="foreach: nextDepartures">
-            <li>
-                <span data-bind="text: TimeOfDay"></span>
-            </li>
-        </ul>
-    </div>
-    
-    <div id="Scripts">
-        <script type="text/javascript" src="../Scripts/jquery-2.0.2.min.js"></script>
-        <script type='text/javascript' src='../Scripts/knockout-2.3.0.js'></script>
-        <script type='text/javascript' src='../Scripts/knockout.mapping-latest.js'></script>
-        <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../Scripts/App/NextDeparture.js"></script>
+    <body>
+        <a href="https://github.com/adbre/nastafarja">
+            <img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub">
+        </a>
 
-        <script type="text/javascript">
-            ko.applyBindings(new NextDepartureViewModel());
-        </script>
-    </div>
-</body>
+        <div class="container">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>Välj färjeled och färjeläger</legend>
+                    <div class="control-group">
+                        <label class="control-label" for="ferryInfo">Färjeled</label>
+                        <div class="controls">
+                            <select id="ferryInfo" data-bind="options: ferryInfos, optionsText: 'Name', value: selectedFerryInfo, optionsCaption: 'Välj färjeled...', event: { change: updateFerryRouteList }"></select>
+                        </div>
+                    </div>
+                    <div class="control-group" data-bind="if: ferryRoutes().length > 0">
+                        <label class="control-label" for="ferryRoute">Avgår från</label>
+                        <div class="controls">
+                            <select id="ferryRoute" data-bind="options: ferryRoutes, value: selectedFerryRoute, optionsCaption: 'Välj färjeläger...', event: { change: getNextDepartures }"></select>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <div data-bind="if: nextDepartures().length > 0">
+                <fieldset>
+                    <legend>Nästa färja avgår</legend>
+                    <ul data-bind="foreach: nextDepartures">
+                        <li>
+                            <span data-bind="text: TimeOfDay"></span>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div style="color: lightgray" class="text-center" data-bind="with: version">
+                <hr />
+                <span data-bind="text: LegalCopyright"></span><br />
+                <span data-bind="text: ProductVersion"></span>
+            </div>
+        </div>
+    
+        <div id="Scripts">
+            <script type="text/javascript" src="../Scripts/jquery-2.0.2.min.js"></script>
+            <script type='text/javascript' src='../Scripts/knockout-2.3.0.js'></script>
+            <script type='text/javascript' src='../Scripts/knockout.mapping-latest.js'></script>
+            <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
+            <script type="text/javascript" src="../Scripts/App/NextDeparture.js"></script>
+
+            <script type="text/javascript">
+                ko.applyBindings(new NextDepartureViewModel());
+            </script>
+        </div>
+    </body>
 </html>

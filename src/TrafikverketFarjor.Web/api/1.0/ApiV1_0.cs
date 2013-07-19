@@ -22,6 +22,8 @@ namespace TrafikverketFarjor.Web.api._1._0
                             assembly.GetName().Version,
                             fileVersionInfo.FileVersion,
                             fileVersionInfo.ProductVersion,
+                            fileVersionInfo.CompanyName,
+                            fileVersionInfo.LegalCopyright
                         };
 
                     return Response.AsJson(model);
@@ -74,7 +76,7 @@ namespace TrafikverketFarjor.Web.api._1._0
                             NextDepartures = route.NextDeparture(now, count)
                             .Select(s => new
                                 {
-                                    TimeOfDay = s.Departs.ToString(),
+                                    TimeOfDay = s.Departs.ToString(@"hh\:mm"),
                                     s.Attribute,
                                 })
                         };
