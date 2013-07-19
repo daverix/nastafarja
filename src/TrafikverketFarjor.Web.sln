@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafikverketFarjor", "Trafi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafikverketFarjor.Tests", "TrafikverketFarjor.Tests\TrafikverketFarjor.Tests.csproj", "{39C1F877-008A-4706-8927-1E3A7DD613C3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D38BCF7F-998E-4571-BDF6-04F15D296C0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

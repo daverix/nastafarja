@@ -15,44 +15,31 @@
                 <legend>Nästa Färja</legend>
                 <div>
                     <label for="ferryInfo">Färjeled</label>
-                    <select id="ferryInfo">
-                        <option>Hönöleden</option>
-                        <option>Kornhallsleden</option>
-                    </select>
+                    <select id="ferryInfo" data-bind="options: ferryInfos, optionsText: 'Name', value: selectedFerryInfo, optionsCaption: 'Välj färjeled...', event: { change: updateFerryRouteList }"></select>
                 </div>
                 <div>
                     <label for="ferryRoute">Avgår från</label>
-                    <select id="ferryRoute">
-                        <option>Hönö</option>
-                        <option>Lilla Varholmen</option>
-                    </select>
+                    <select id="ferryRoute" data-bind="options: ferryRoutes, value: selectedFerryRoute, optionsCaption: 'Välj färjeläger...', event: { change: getNextDepartures }"></select>
                 </div>
             </fieldset>
         </form>
-        <div>
-            @System.DateTime.Now.ToString(@"\Det är nu dddd \den dd MMMM, oc\h klockan är HH:mm")
-        </div>
-        <div>
-            <div>
-                <h2>10:35</h2>
-                <span style="color: gray">Avgår om 14 minuter</span>
-            </div>
-            <div>
-                <h3>10:50</h3>
-                <span style="color: gray">Avgår om 29 minuter</span>
-            </div>
-            <h3>10:50</h3>
-            <h4>11:05</h4>
-            <h4>11:20</h4>
-            <h4>11:35</h4>
-            <h4>11:50</h4>
-        </div>
+        <ul data-bind="foreach: nextDepartures">
+            <li>
+                <span data-bind="text: TimeOfDay"></span>
+            </li>
+        </ul>
     </div>
     
     <div id="Scripts">
         <script type="text/javascript" src="../Scripts/jquery-2.0.2.min.js"></script>
         <script type='text/javascript' src='../Scripts/knockout-2.3.0.js'></script>
+        <script type='text/javascript' src='../Scripts/knockout.mapping-latest.js'></script>
         <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../Scripts/App/NextDeparture.js"></script>
+
+        <script type="text/javascript">
+            ko.applyBindings(new NextDepartureViewModel());
+        </script>
     </div>
 </body>
 </html>

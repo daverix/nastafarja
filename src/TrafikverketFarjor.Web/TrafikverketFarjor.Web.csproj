@@ -103,11 +103,14 @@
     <Content Include="Scripts\knockout-2.3.0.debug.js" />
     <Content Include="Scripts\knockout-2.3.0.js" />
     <None Include="Views\NextDeparture.cshtml" />
+    <Content Include="Scripts\knockout.mapping-latest.debug.js" />
+    <Content Include="Scripts\knockout.mapping-latest.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="api\1.0\ApiV1_0.cs" />
     <Compile Include="Application.cs" />
+    <Compile Include="CustomBoostrapper.cs" />
     <Compile Include="SelfHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
