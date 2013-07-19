@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FerryInfo>
+  <Name>Gullmarsleden</Name>
+  <Region>Västra Götaland</Region>
+  <Url>http://www.trafikverket.se/Farja/Farjeleder/Farjeleder-i-ditt-lan/Farjeleder-i-Vastra-Gotaland1/Gullmarsleden/</Url>
+  <Routes>
+    <Route>
+      <DepartsFrom>Finnsbo</DepartsFrom>
+      <ArrivesAt>Skår</ArrivesAt>
+      <Schedules>
+        <Schedule>
+          <DayOfWeek>Weekdays</DayOfWeek>
+          <Entry hour="00" values="00" />
+          <Entry hour="01" values="00" />
+          <Entry hour="02" values="00" />
+          <Entry hour="03" values="" />
+          <Entry hour="04" values="00" />
+          <Entry hour="05" values="00           40" />
+          <Entry hour="06" values="00  15    30    45" />
+          <Entry hour="07" values="00  15    30    45" />
+          <Entry hour="08" values="00     20    40" />
+          <Entry hour="09" values="00     20    40" />
+          <Entry hour="10" values="00     20    40" />
+          <Entry hour="11" values="00     20    40" />
+          <Entry hour="12" values="00     20    40" />
+          <Entry hour="13" values="00     20    40" />
+          <Entry hour="14" values="00     20    40" />
+          <Entry hour="15" values="00     20    40" />
+          <Entry hour="16" values="00 15     30     45" />
+          <Entry hour="17" values="00 15     30     45" />
+          <Entry hour="18" values="00     20    40" />
+          <Entry hour="19" values="00     20    40" />
+          <Entry hour="20" values="00     20" />
+          <Entry hour="21" values="00        30" />
+          <Entry hour="22" values="00" />
+          <Entry hour="23" values="00" />
+        </Schedule>
+        <Schedule>
+          <DayOfWeek>Weekends</DayOfWeek>
+          <Entry hour="00" values="00" />
+          <Entry hour="01" values="00" />
+          <Entry hour="02" values="00" />
+          <Entry hour="03" values="" />
+          <Entry hour="04" values="00" />
+          <Entry hour="05" values="00    40" />
+          <Entry hour="06" values="   20" />
+          <Entry hour="07" values="00    40" />
+          <Entry hour="08" values="00 20 40" />
+          <Entry hour="09" values="00 20 40" />
+          <Entry hour="10" values="00 20 40" />
+          <Entry hour="11" values="00 20 40" />
+          <Entry hour="12" values="00 20 40" />
+          <Entry hour="13" values="00 20 40" />
+          <Entry hour="14" values="00 20 40" />
+          <Entry hour="15" values="00 20 40" />
+          <Entry hour="16" values="00 20 40" />
+          <Entry hour="17" values="00 20 40" />
+          <Entry hour="18" values="00 20 40" />
+          <Entry hour="19" values="00 20 40" />
+          <Entry hour="20" values="00 20" />
+          <Entry hour="21" values="00    30" />
+          <Entry hour="22" values="00" />
+          <Entry hour="23" values="00" />
+        </Schedule>
+      </Schedules>
+    </Route>
+    <Route>
+      <DepartsFrom>Skår</DepartsFrom>
+      <ArrivesAt>Finnsbo</ArrivesAt>
+      <Schedules>
+        <Schedule>
+          <DayOfWeek>Weekdays</DayOfWeek>
+          <Entry hour="00" values="      20" />
+          <Entry hour="01" values="      20" />
+          <Entry hour="02" values="      20" />
+          <Entry hour="03" values="" />
+          <Entry hour="04" values="      20" />
+          <Entry hour="05" values="      20" />
+          <Entry hour="06" values="00  15    30    45" />
+          <Entry hour="07" values="00  15    30    45" />
+          <Entry hour="08" values="00     20    40" />
+          <Entry hour="09" values="00     20    40" />
+          <Entry hour="10" values="00     20    40" />
+          <Entry hour="11" values="00     20    40" />
+          <Entry hour="12" values="00     20    40" />
+          <Entry hour="13" values="00     20    40" />
+          <Entry hour="14" values="00     20    40" />
+          <Entry hour="15" values="00     20    40" />
+          <Entry hour="16" values="00 15     30     45" />
+          <Entry hour="17" values="00 15     30     45" />
+          <Entry hour="18" values="00     20    40" />
+          <Entry hour="19" values="00     20    40" />
+          <Entry hour="20" values="00     20    40" />
+          <Entry hour="21" values="00               45" />
+          <Entry hour="22" values="00" />
+          <Entry hour="23" values="00" />
+        </Schedule>
+        <Schedule>
+          <DayOfWeek>Weekends</DayOfWeek>
+          <Entry hour="00" values="   20" />
+          <Entry hour="01" values="   20" />
+          <Entry hour="02" values="   20" />
+          <Entry hour="03" values="" />
+          <Entry hour="04" values="   20" />
+          <Entry hour="05" values="   20" />
+          <Entry hour="06" values="00    40" />
+          <Entry hour="07" values="   20" />
+          <Entry hour="08" values="00 20 40" />
+          <Entry hour="09" values="00 20 40" />
+          <Entry hour="10" values="00 20 40" />
+          <Entry hour="11" values="00 20 40" />
+          <Entry hour="12" values="00 20 40" />
+          <Entry hour="13" values="00 20 40" />
+          <Entry hour="14" values="00 20 40" />
+          <Entry hour="15" values="00 20 40" />
+          <Entry hour="16" values="00 20 40" />
+          <Entry hour="17" values="00 20 40" />
+          <Entry hour="18" values="00 20 40" />
+          <Entry hour="19" values="00 20 40" />
+          <Entry hour="20" values="00 20 40" />
+          <Entry hour="21" values="   20    45" />
+          <Entry hour="22" values="   20" />
+          <Entry hour="23" values="   20" />
+        </Schedule>
+      </Schedules>
+    </Route>
+  </Routes>
+  <Attributes>
+    <Attribute>
+      <Key>*</Key>
+      <Description>På julafton, juldagen, annandag jul och nyårsdagen tillämpas SÄRSKILD TURLISTA med färre turer. Denna anslås vid färjelägena.</Description>
+    </Attribute>
+  </Attributes>
+</FerryInfo>

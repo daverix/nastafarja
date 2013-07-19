@@ -88,6 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FerryInfos\README.txt" />
+    <EmbeddedResource Include="FerryInfos\VästraGötaland\10-Björköleden.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FerryInfos\VästraGötaland\06-Gullmarsleden.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="FerryInfos\VästraGötaland\07-Lyrleden.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>

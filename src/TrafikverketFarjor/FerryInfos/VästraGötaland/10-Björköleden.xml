@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FerryInfo>
+  <Name>Björköleden</Name>
+  <Region>Västra Götaland</Region>
+  <Url>http://www.trafikverket.se/Farja/Farjeleder/Farjeleder-i-ditt-lan/Farjeleder-i-Vastra-Gotaland1/Bjorkoleden/</Url>
+  <Routes>
+    <Route>
+      <DepartsFrom>Björkö</DepartsFrom>
+      <ArrivesAt>Lilla Varholmen</ArrivesAt>
+      <Schedules>
+        <Schedule>
+          <DayOfWeek>Weekdays</DayOfWeek>
+          <Entry hour="00" values="00 30C" />
+          <Entry hour="01" values="00A" />
+          <Entry hour="02" values="00A" />
+          <Entry hour="03" values="00A" />
+          <Entry hour="04" values="00A" />
+          <Entry hour="05" values="00  30    45" />
+          <Entry hour="06" values="00  15 30 45" />
+          <Entry hour="07" values="00  15 30 45" />
+          <Entry hour="08" values="00  15 30" />
+          <Entry hour="09" values="00  30" />
+          <Entry hour="10" values="00  30" />
+          <Entry hour="11" values="00  30" />
+          <Entry hour="12" values="00  30" />
+          <Entry hour="13" values="00  30" />
+          <Entry hour="14" values="00  30" />
+          <Entry hour="15" values="00  30 47" />
+          <Entry hour="16" values="02  17 32 47" />
+          <Entry hour="17" values="02  17 32 47" />
+          <Entry hour="18" values="02  17 32" />
+          <Entry hour="19" values="00  30" />
+          <Entry hour="20" values="00  30" />
+          <Entry hour="21" values="00  30" />
+          <Entry hour="22" values="00  30" />
+          <Entry hour="23" values="00" />
+        </Schedule>
+        <Schedule>
+          <DayOfWeek>Weekends</DayOfWeek>
+          <Entry hour="00" values="00 30D" />
+          <Entry hour="01" values="00" />
+          <Entry hour="02" values="00" />
+          <Entry hour="03" values="00" />
+          <Entry hour="04" values="00A" />
+          <Entry hour="05" values="00A" />
+          <Entry hour="06" values="00  30" />
+          <Entry hour="07" values="00  30" />
+          <Entry hour="08" values="00  30" />
+          <Entry hour="09" values="00  30" />
+          <Entry hour="10" values="00  30" />
+          <Entry hour="11" values="00  30" />
+          <Entry hour="12" values="00  30" />
+          <Entry hour="13" values="00  30" />
+          <Entry hour="14" values="00  30" />
+          <Entry hour="15" values="00  30" />
+          <Entry hour="16" values="00  30" />
+          <Entry hour="17" values="00  30" />
+          <Entry hour="18" values="00  30" />
+          <Entry hour="19" values="00  30" />
+          <Entry hour="20" values="00  30B" />
+          <Entry hour="21" values="00  30B" />
+          <Entry hour="22" values="00  30B" />
+          <Entry hour="23" values="00" />
+        </Schedule>
+      </Schedules>
+    </Route>
+    <Route>
+      <DepartsFrom>Lilla Varholmen</DepartsFrom>
+      <ArrivesAt>Björkö</ArrivesAt>
+      <Schedules>
+        <Schedule>
+          <DayOfWeek>Weekdays</DayOfWeek>
+          <Entry hour="00" values="10 40C" />
+          <Entry hour="01" values="10A" />
+          <Entry hour="02" values="10A" />
+          <Entry hour="03" values="10A" />
+          <Entry hour="04" values="10A" />
+          <Entry hour="05" values="10  37 52" />
+          <Entry hour="06" values="07  22 37 52" />
+          <Entry hour="07" values="07  22 37 52" />
+          <Entry hour="08" values="07  22 40" />
+          <Entry hour="09" values="10 40" />
+          <Entry hour="10" values="10 40" />
+          <Entry hour="11" values="10 40" />
+          <Entry hour="12" values="10 40" />
+          <Entry hour="13" values="10 40" />
+          <Entry hour="14" values="10 40" />
+          <Entry hour="15" values="10 40 55" />
+          <Entry hour="16" values="10 25 40 55" />
+          <Entry hour="17" values="10 25 40 55" />
+          <Entry hour="18" values="10 25 40" />
+          <Entry hour="19" values="10 40" />
+          <Entry hour="20" values="10 40" />
+          <Entry hour="21" values="10 40" />
+          <Entry hour="22" values="10 40" />
+          <Entry hour="23" values="10" />
+        </Schedule>
+        <Schedule>
+          <DayOfWeek>Weekends</DayOfWeek>
+          <Entry hour="00" values="10 40D" />
+          <Entry hour="01" values="10" />
+          <Entry hour="02" values="10" />
+          <Entry hour="03" values="10" />
+          <Entry hour="04" values="10A" />
+          <Entry hour="05" values="10A" />
+          <Entry hour="06" values="10" />
+          <Entry hour="07" values="10 40" />
+          <Entry hour="08" values="10 40" />
+          <Entry hour="09" values="10 40" />
+          <Entry hour="10" values="10 40" />
+          <Entry hour="11" values="10 40" />
+          <Entry hour="12" values="10 40" />
+          <Entry hour="13" values="10 40" />
+          <Entry hour="14" values="10 40" />
+          <Entry hour="15" values="10 40" />
+          <Entry hour="16" values="10 40" />
+          <Entry hour="17" values="10 40" />
+          <Entry hour="18" values="10 40" />
+          <Entry hour="19" values="10 40" />
+          <Entry hour="20" values="10 40B" />
+          <Entry hour="21" values="10 40B" />
+          <Entry hour="22" values="10 40B" />
+          <Entry hour="23" values="10" />
+        </Schedule>
+      </Schedules>
+    </Route>
+  </Routes>
+  <Attributes>
+    <Attribute>
+      <Key>A</Key>
+      <Description>Går endast efter kallelse.</Description>
+    </Attribute>
+    <Attribute>
+      <Key>B</Key>
+      <Description>Går ej 24, 25 och 31/12.</Description>
+    </Attribute>
+    <Attribute>
+      <Key>C</Key>
+      <Description>Går ej måndag.</Description>
+    </Attribute>
+    <Attribute>
+      <Key>D</Key>
+      <Description>Går endast lördag (helgdag).</Description>
+    </Attribute>
+    <Attribute>
+      <Key>*</Key>
+      <Description>Med lördag avses även jul-, nyårs och midsommarafton.</Description>
+    </Attribute>
+    <Attribute>
+      <Key>**</Key>
+      <Description>Vecka 27-31 körs 30 minuterstrafik vardagar 05:30-18:30.</Description>
+    </Attribute>
+  </Attributes>
+</FerryInfo>
