@@ -11,7 +11,12 @@
     self.updateFerryRouteList = function() {
         var selectedFerryInfo = self.selectedFerryInfo();
         if (selectedFerryInfo) {
-            self.ferryRoutes(selectedFerryInfo.DepartsFrom());
+            var departsFrom = selectedFerryInfo.DepartsFrom();
+            self.ferryRoutes(departsFrom);
+            if (departsFrom.length == 1) {
+                self.selectedFerryRoute(departsFrom[0]);
+                self.getNextDepartures();
+            }
         } else {
             self.ferryRoutes([]);
         }
