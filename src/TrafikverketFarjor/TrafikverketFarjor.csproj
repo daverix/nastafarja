@@ -88,6 +88,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FerryInfos\README.txt" />
+    <EmbeddedResource Include="FerryInfos\VästraGötaland\07-Lyrleden.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FerryInfos\VästraGötaland\04-Ängöleden.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FerryInfos\VästraGötaland\05-Malöleden.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
