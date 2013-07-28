@@ -110,3 +110,16 @@ UpgradeLog*.XML
 # Explicit ignores
 /tools/WinSCP.ini
 /dist/
+# Android files
+src/Android/.idea/
+src/Android/.gradle/
+*.iml
+src/Android/local.properties
+src/Android/build/
+src/Android/*/build/
+
+#gedit working files
+*~
+
+
+
