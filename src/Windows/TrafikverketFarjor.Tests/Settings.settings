@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="WebTestsRootUrl" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://www.nastafarja.se/</Value>
+      <Value Profile="(Default)">http://localhost:50799</Value>
     </Setting>
   </Settings>
 </SettingsFile>

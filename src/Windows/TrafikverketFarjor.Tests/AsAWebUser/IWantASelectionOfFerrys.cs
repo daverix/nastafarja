@@ -1,12 +1,13 @@
 ﻿using System.Linq;
-using System.Threading;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using TrafikverketFarjor.Tests.Helpers;
 
 namespace TrafikverketFarjor.Tests.AsAWebUser
 {
+    [TestFixture(Chrome)]
     [TestFixture(Firefox)]
+    [TestFixture(InternetExplorer)]
     public class IWantASelectionOfFerrys : BrowserDriverTests
     {
         public IWantASelectionOfFerrys(string browserName) : base(browserName) {}
@@ -18,13 +19,25 @@ namespace TrafikverketFarjor.Tests.AsAWebUser
         }
 
         [Test]
-        public void InADropDownlist()
+        [TestCase("Sund Jarenleden")]
+        [TestCase("Hamburgsundsleden")]
+        [TestCase("Bohus Malmönleden")]
+        [TestCase("Ängöleden")]
+        [TestCase("Lyrleden")]
+        [TestCase("Malöleden")]
+        [TestCase("Gullmarsleden")]
+        [TestCase("Svanesundsleden")]
+        [TestCase("Nordöleden")]
+        [TestCase("Björköleden")]
+        [TestCase("Hönöleden")]
+        [TestCase("Kornhallsleden")]
+        public void InADropDownlist(string expectedText)
         {
             var options = Browser
-                .FindElement(By.Id("ferryInfo"))
-                .FindElements(By.TagName("option"));
+                .FindElements(By.TagName("option"))
+                .Where(tag => tag.Text == expectedText);
 
-            Assert.That(options.Count(), Is.GreaterThan(0));
+            Assert.That(options.Count(), Is.EqualTo(1));
         }
 
         [Test]

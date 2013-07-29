@@ -25,7 +25,7 @@ namespace TrafikverketFarjor.Tests {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://www.nastafarja.se/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:50799")]
         public string WebTestsRootUrl {
             get {
                 return ((string)(this["WebTestsRootUrl"]));
