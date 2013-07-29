@@ -5,10 +5,10 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Safari;
-using TrafikverketFarjor.Web;
 
 namespace TrafikverketFarjor.Tests.Helpers
 {
+    [Category("Webtests")]
     public abstract class BrowserDriverTests
     {
         public const string Chrome = "Chrome";
