@@ -17,6 +17,7 @@ namespace TrafikverketFarjor.Tests.Helpers
         public const string Safari = "Safari";
 
         private readonly Func<IWebDriver> _browserDriverFactory;
+        private string _webTestsUrl;
 
         protected BrowserDriverTests(Func<IWebDriver> browserDriverFactory)
         {
@@ -24,9 +25,30 @@ namespace TrafikverketFarjor.Tests.Helpers
             _browserDriverFactory = browserDriverFactory;
         }
 
-        protected BrowserDriverTests() : this(() => new FirefoxDriver()) {}
+        protected BrowserDriverTests() : this(Environment.GetEnvironmentVariable("WEBTESTS_BROWSER") ?? Firefox) {}
 
-        protected BrowserDriverTests(string driverName) : this(() => GetWebDriver(driverName)) {}
+        protected BrowserDriverTests(string driverName) : this(() => GetWebDriver(driverName)) { }
+
+        public string WebTestsUrl
+        {
+            get
+            {
+                if (_webTestsUrl == null)
+                {
+                    // The default localhost URL's port should correspond to the port value entered in the 
+                    // TrafikverketFarjor.Web project properties Web tab. This enabled us to run web tests locally
+                    // after we have hit F5 at least once...
+                    _webTestsUrl = Environment.GetEnvironmentVariable("WEBTESTS_URL") ?? "http://localhost:50799";
+                }
+
+                return _webTestsUrl;
+            }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value)) throw new ArgumentException();
+                _webTestsUrl = value;
+            }
+        }
 
         public static IWebDriver GetWebDriver(string browserName)
         {
@@ -66,7 +88,7 @@ namespace TrafikverketFarjor.Tests.Helpers
 
         public string GetUrlFromSettings(string path)
         {
-            return (new UriBuilder(Settings.Default.WebTestsRootUrl) {Path = path}).ToString();
+            return (new UriBuilder(WebTestsUrl) { Path = path }).ToString();
         }
     }
 }
