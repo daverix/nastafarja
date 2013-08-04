@@ -4,11 +4,8 @@ using TrafikverketFarjor.Tests.Helpers;
 
 namespace TrafikverketFarjor.Tests.AsAApiUser.v1_0
 {
-    [TestFixture(Firefox)]
-    public class IWantToRetreiveFerryInfo : BrowserDriverTests
+    public class IWantToRetreiveFerryInfo : WebTests
     {
-        public IWantToRetreiveFerryInfo(string browserName) : base(browserName) { }
-
         [Test]
         public void ItemsReturnedIsAllEmbeddedFerryInfos()
         {

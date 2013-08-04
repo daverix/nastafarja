@@ -5,7 +5,7 @@ using TrafikverketFarjor.Web;
 
 namespace TrafikverketFarjor.Tests.Helpers
 {
-    public abstract class SelfHostedWebTests : BrowserDriverTests
+    public abstract class SelfHostedWebTests : WebTests
     {
         private const string DefaultSelfHostUrl = "http://localhost:8888";
         private IDisposable _selfHost;

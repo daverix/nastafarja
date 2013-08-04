@@ -9,7 +9,7 @@ using OpenQA.Selenium.Safari;
 namespace TrafikverketFarjor.Tests.Helpers
 {
     [Category("Webtests")]
-    public abstract class BrowserDriverTests
+    public abstract class WebTests
     {
         public const string Chrome = "Chrome";
         public const string Firefox = "Firefox";
@@ -19,15 +19,15 @@ namespace TrafikverketFarjor.Tests.Helpers
         private readonly Func<IWebDriver> _browserDriverFactory;
         private string _webTestsUrl;
 
-        protected BrowserDriverTests(Func<IWebDriver> browserDriverFactory)
+        protected WebTests(Func<IWebDriver> browserDriverFactory)
         {
             if (browserDriverFactory == null) throw new ArgumentNullException("browserDriverFactory");
             _browserDriverFactory = browserDriverFactory;
         }
 
-        protected BrowserDriverTests() : this(Environment.GetEnvironmentVariable("WEBTESTS_BROWSER") ?? Firefox) {}
+        protected WebTests() : this(Environment.GetEnvironmentVariable("WEBTESTS_BROWSER") ?? Firefox) {}
 
-        protected BrowserDriverTests(string driverName) : this(() => GetWebDriver(driverName)) { }
+        protected WebTests(string driverName) : this(() => GetWebDriver(driverName)) { }
 
         public string WebTestsUrl
         {

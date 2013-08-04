@@ -4,11 +4,8 @@ using TrafikverketFarjor.Tests.Helpers;
 
 namespace TrafikverketFarjor.Tests.AsAApiUser.v1_0
 {
-    [TestFixture(Firefox)]
-    public class IWantToRetreiveTheDeployedVersion : BrowserDriverTests
+    public class IWantToRetreiveTheDeployedVersion : WebTests
     {
-        public IWantToRetreiveTheDeployedVersion(string browserName) : base(browserName) {}
-
         [SetUp]
         public void Get()
         {

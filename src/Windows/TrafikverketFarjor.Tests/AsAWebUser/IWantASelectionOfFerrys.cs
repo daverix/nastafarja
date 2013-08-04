@@ -5,13 +5,8 @@ using TrafikverketFarjor.Tests.Helpers;
 
 namespace TrafikverketFarjor.Tests.AsAWebUser
 {
-    [TestFixture(Chrome)]
-    [TestFixture(Firefox)]
-    [TestFixture(InternetExplorer)]
-    public class IWantASelectionOfFerrys : BrowserDriverTests
+    public class IWantASelectionOfFerrys : WebTests
     {
-        public IWantASelectionOfFerrys(string browserName) : base(browserName) {}
-
         [SetUp]
         public void Act()
         {

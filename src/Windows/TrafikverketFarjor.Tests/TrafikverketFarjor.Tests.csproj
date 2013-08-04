@@ -91,7 +91,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helpers\SelfHostedWebTests.cs" />
     <Compile Include="AsAApiUser\v1_0\IWantToRetreiveTheDeployedVersion.cs" />
-    <Compile Include="Helpers\BrowserDriverTests.cs" />
+    <Compile Include="Helpers\WebTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
