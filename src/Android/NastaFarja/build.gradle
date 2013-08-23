@@ -4,9 +4,11 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:0.5.+'
+        classpath 'com.squareup.gradle:gradle-android-test-plugin:0.9.+'
     }
 }
 apply plugin: 'android'
+apply plugin: 'android-test'
 
 repositories {
     mavenCentral()
@@ -15,6 +17,10 @@ repositories {
 dependencies {
     compile 'com.android.support:appcompat-v7:18.0.+'
     compile 'com.google.code.gson:gson:2.2.4'
+
+    testCompile 'junit:junit:4.10'
+    testCompile 'org.robolectric:robolectric:2.1.+'
+    testCompile 'com.squareup:fest-android:1.0.+'
 }
 
 android {
