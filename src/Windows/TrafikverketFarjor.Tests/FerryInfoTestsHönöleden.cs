@@ -55,6 +55,22 @@ namespace TrafikverketFarjor.Tests
         }
 
         [Test]
+        [TestCase("2013-08-24T13:14:15.155", 10)]
+        [TestCase("2013-08-24T22:14:15.155", 10)]
+        public void NextDeparture_Take10(string dateTimeString, int take)
+        {
+            // Arrange
+            var date = DateTime.Parse(dateTimeString);
+            var route = _sut.GetRoute("Hönö");
+
+            // Act
+            var actual = route.NextDeparture(date, take);
+
+            // Assert
+            Assert.That(actual.Count(), Is.EqualTo(take));
+        }
+
+        [Test]
         public void AttributeA_NotMondays()
         {
             // Act

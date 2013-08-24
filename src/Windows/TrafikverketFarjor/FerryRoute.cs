@@ -43,9 +43,15 @@ namespace TrafikverketFarjor
         {
             if (count < 1) throw new ArgumentOutOfRangeException("count", count, "Count must be equal to or greater than 1.");
 
-            return GetSchedule(dateTime)
+            var result = GetSchedule(dateTime)
                 .Where(s => s.Departs >= dateTime.TimeOfDay)
-                .Take(count);
+                .Take(count)
+                .ToList();
+
+            if (result.Count < count)
+                result.AddRange(NextDeparture(dateTime.Date.AddDays(1), count - result.Count));
+
+            return result;
         }
 
         private static ScheduleDayOfWeek GetDayOfWeek(DateTime dateTime)
