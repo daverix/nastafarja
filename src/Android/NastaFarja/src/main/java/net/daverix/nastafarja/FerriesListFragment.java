@@ -11,6 +11,8 @@ import android.widget.ListView;
 
 import net.daverix.nastafarja.model.Ferry;
 import net.daverix.nastafarja.net.APIException;
+import net.daverix.nastafarja.net.DepartureFetcher;
+import net.daverix.nastafarja.net.DepartureFetcherImpl;
 import net.daverix.nastafarja.net.FerriesFetcher;
 import net.daverix.nastafarja.net.FerriesFetcherImpl;
 import net.daverix.nastafarja.net.HttpFetcher;
@@ -39,6 +41,7 @@ public class FerriesListFragment extends Fragment {
     private HttpFetcher mHttpFetcher;
     private Parser mParser;
     private INastaFarjaAPI mApi;
+    private DepartureFetcher mDepartureFetcher;
     private FerriesFetcher mFerriesFetcher;
     private FerryListRowFactory mRowsFactory;
     private FerryListViewFactory mFerryHeaderFactory;
@@ -51,7 +54,8 @@ public class FerriesListFragment extends Fragment {
         mHttpFetcher = new SimpleHttpFetcher();
         mParser = new GsonParser();
         mApi = new NastaFarjaAPI(API_HOST, mParser, mHttpFetcher);
-        mFerriesFetcher = new FerriesFetcherImpl(mApi);
+        mDepartureFetcher = new DepartureFetcherImpl(mApi);
+        mFerriesFetcher = new FerriesFetcherImpl(mApi, mDepartureFetcher);
         mFerryHeaderFactory = new FerryHeaderViewFactory(getActivity());
         mDepartureRowFactory = new DepartureViewFactory(getActivity());
         mRowsFactory = new FerryListRowFactoryImpl();

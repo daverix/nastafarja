@@ -12,18 +12,11 @@ import java.util.List;
  */
 public class FerriesFetcherImpl implements FerriesFetcher {
     private final INastaFarjaAPI mApi;
+    private final DepartureFetcher mDepartureFetcher;
 
-    public FerriesFetcherImpl(INastaFarjaAPI api) {
+    public FerriesFetcherImpl(INastaFarjaAPI api, DepartureFetcher departureFetcher) {
         mApi = api;
-    }
-
-    private List<Departure> fetchDepartures(Ferry ferry) throws APIException {
-        List<Departure> departures = new ArrayList<Departure>();
-        List<String> names = ferry.getDepartsFrom();
-        for(String name : names) {
-            departures.add(mApi.getDeparture(ferry.getName(), name));
-        }
-        return departures;
+        mDepartureFetcher = departureFetcher;
     }
 
     @Override
@@ -32,7 +25,7 @@ public class FerriesFetcherImpl implements FerriesFetcher {
         List<Ferry> ferries = info.getFerries();
 
         for(Ferry ferry : ferries) {
-            ferry.setDepartures(fetchDepartures(ferry));
+            ferry.setDepartures(mDepartureFetcher.fetchDepartures(ferry));
         }
 
         return ferries;

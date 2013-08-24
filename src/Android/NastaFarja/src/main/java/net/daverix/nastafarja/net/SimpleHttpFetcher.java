@@ -21,7 +21,7 @@ public class SimpleHttpFetcher implements HttpFetcher {
     public String fetch(String host, String file) throws HttpErrorException {
         HttpURLConnection urlConnection = null;
         try {
-            URL url = url = new URL("http", host, file);
+            URL url = new URL("http", host, file);
             urlConnection = (HttpURLConnection) url.openConnection();
             final int responseCode = urlConnection.getResponseCode();
             if(responseCode != 200) {
