@@ -8,7 +8,7 @@ namespace TrafikverketFarjor.Tests.Helpers
     {
         public static void WaitForAjaxToComplete(this IWebDriver webdriver)
         {
-            Thread.Sleep(TimeSpan.FromSeconds(5));
+            Thread.Sleep(TimeSpan.FromSeconds(10));
         }
     }
 }
