@@ -43,7 +43,7 @@ param(
 }
 
 function Get-TeamCityBuildNumber {
-    return (Get-Int32OrDefault "$env:BUILD_NUMBER")
+    return "$env:BUILD_NUMBER"
 }
 
 function Get-BambooBuildNumber {
