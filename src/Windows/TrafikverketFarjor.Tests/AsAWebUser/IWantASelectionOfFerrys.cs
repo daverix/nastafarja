@@ -11,6 +11,7 @@ namespace TrafikverketFarjor.Tests.AsAWebUser
         public void Act()
         {
             Browser.Navigate().GoToUrl(GetUrlFromSettings("/"));
+            Browser.WaitForAjaxToComplete();
         }
 
         [Test]
