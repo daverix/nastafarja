@@ -5,7 +5,8 @@ using TrafikverketFarjor.Tests.Helpers;
 
 namespace TrafikverketFarjor.Tests.AsAWebUser
 {
-    public class IWantASelectionOfFerrys : WebTests
+    [TestFixture]
+    public class IWantASelectionOfFerrys : WebDriverTests
     {
         [SetUp]
         public void Act()

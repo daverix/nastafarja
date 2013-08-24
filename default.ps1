@@ -9,8 +9,6 @@ properties {
 
     $NUnitRunnersVersion = "2.6.2"
     $NUnitExe = "$NuGetOutput\NUnit.Runners.$NUnitRunnersVersion\tools\nunit-console.exe"
-
-    $Webdriver = "Firefox"
 }
 
 task default -depends Clean,Compile,CreateArtifacts,RunUnitTests
@@ -49,9 +47,12 @@ task RunUnitTests -depends InstallNUnitRunners {
     Exec { & "$NUnitExe" "$Artifacts\TrafikverketFarjor.Tests\TrafikverketFarjor.Tests.dll" /noresult /nologo /exclude:Webtests }
 }
 
+task RunWebApiTests -depends InstallNUnitRunners {
+    Exec { & "$NUnitExe" "$Artifacts\TrafikverketFarjor.Tests\TrafikverketFarjor.Tests.dll" /noresult /nologo /include:WebApiTests }
+}
+
 task RunWebTests -depends InstallNUnitRunners {
-    $env:WEBTESTS_WEBDRIVER="$Webdriver"
-    Exec { & "$NUnitExe" "$Artifacts\TrafikverketFarjor.Tests\TrafikverketFarjor.Tests.dll" /noresult /nologo /include:Webtests }
+    Exec { & "$NUnitExe" "$Artifacts\TrafikverketFarjor.Tests\TrafikverketFarjor.Tests.dll" /noresult /nologo /include:WebDriverTests }
 }
 
 task Deploy {

@@ -1,10 +1,12 @@
 using System.Linq;
 using NUnit.Framework;
+using Newtonsoft.Json.Linq;
 using TrafikverketFarjor.Tests.Helpers;
 
 namespace TrafikverketFarjor.Tests.AsAApiUser.v1_0
 {
-    public class IWantToRetreiveFerryInfo : WebTests
+    [TestFixture]
+    public class IWantToRetreiveFerryInfo : WebApiTests
     {
         [Test]
         public void ItemsReturnedIsAllEmbeddedFerryInfos()
@@ -13,8 +15,7 @@ namespace TrafikverketFarjor.Tests.AsAApiUser.v1_0
             var expectedNames = FerryInfo.GetAll().Select(i => i.Name).ToArray();
 
             // Act
-            Browser.Navigate().GoToUrl(GetUrlFromSettings("/api/1.0/info"));
-            var response = Browser.GetJObjectFromPageSource();
+            var response = (JObject)GetResponseJson("/api/1.0/info");
 
             var actual = response["Info"].Children().Select(c => c.Value<string>("Name")).ToArray();
 
@@ -26,8 +27,7 @@ namespace TrafikverketFarjor.Tests.AsAApiUser.v1_0
         public void SpecifiedItem()
         {
             // Act
-            Browser.Navigate().GoToUrl(GetUrlFromSettings("/api/1.0/info/Hönöleden"));
-            var response = Browser.GetJObjectFromPageSource();
+            var response = (JObject) GetResponseJson("/api/1.0/info/Hönöleden");
 
             var actual = response["Info"].Children().Select(c => c.Value<string>("Name")).ToArray();
 
