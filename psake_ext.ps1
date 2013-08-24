@@ -3,7 +3,9 @@ function Get-NormalizedVersion
 param(
     [string]$versionString = $(throw "versionString is required")
 )
-
+  if ($versionString -match "^[0-9]+$") {
+    $versionString = "${versionString}.0"
+  }
   $version = New-Object -type System.Version $versionString
   $version = New-Object -type System.Version `
     $(if ($version.Major -gt 0) { $version.Major } else { 0 }),`

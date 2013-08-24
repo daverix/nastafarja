@@ -3,7 +3,6 @@ properties {
     $WindowsSource = ".\src\Windows"
 
     $Version = Get-BuildNumberFromCISystem
-    if (-not $Version) { $Version = "1.0" }
     $Version = Get-NormalizedVersion $Version
     $InformationalVersion = Get-InformationalVersion $Version
 
