@@ -2,6 +2,11 @@ properties {
     $Configuration = "Release"
     $WindowsSource = ".\src\Windows"
 
+    $Version = Get-BuildNumberFromCISystem
+    if (-not $Version) { $Version = "1.0" }
+    $Version = Get-NormalizedVersion $Version
+    $InformationalVersion = Get-InformationalVersion $Version
+
     $Artifacts = ".\dist"
     
     $NuGetExe = "$WindowsSource\.nuget\nuget.exe"
@@ -11,11 +16,31 @@ properties {
     $NUnitExe = "$NuGetOutput\NUnit.Runners.$NUnitRunnersVersion\tools\nunit-console.exe"
 }
 
-task default -depends Clean,Compile,CreateArtifacts,RunUnitTests
+include .\psake_ext.ps1
+
+task default -depends Clean,Generate-AssemblyInfo,Compile,Reset-AssemblyInfo,CreateArtifacts,RunUnitTests
 
 task Clean {
     Exec { msbuild /p:Configuration=Debug /t:Clean "$WindowsSource\TrafikverketFarjor.Web.sln" }
     Exec { msbuild /p:Configuration=Release /t:Clean "$WindowsSource\TrafikverketFarjor.Web.sln" }
+}
+
+task Generate-AssemblyInfo  {
+    Get-ChildItem -Recurse -Filter AssemblyInfo.cs | foreach { Generate-AssemblyInfo `
+        -file $_.FullName `
+        -title "NastaFarja.se $version" `
+        -company "" `
+        -product "NastaFarja.se $version" `
+        -version $version `
+        -informationalVersion $InformationalVersion `
+        -copyright "Copyright (c) 42A Consulting, Adam Brengesjo 2012-2013"
+    }
+}
+
+task Reset-AssemblyInfo {
+    Get-ChildItem -Recurse -Filter AssemblyInfo.cs | foreach {
+        git checkout HEAD -- $_.FullName
+    }
 }
 
 task Compile -depends Clean {
