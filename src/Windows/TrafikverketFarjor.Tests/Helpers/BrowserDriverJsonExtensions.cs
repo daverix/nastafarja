@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Newtonsoft.Json.Linq;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 
 namespace TrafikverketFarjor.Tests.Helpers
@@ -25,6 +26,7 @@ namespace TrafikverketFarjor.Tests.Helpers
 
             var browserImplementations = new Dictionary<Type, Func<IWebDriver, string>>
                 {
+                    {typeof (ChromeDriver), GetJsonCodeFromChromeDriver},
                     {typeof (FirefoxDriver), GetJsonCodeFromChromeDriver}
                 };
 
