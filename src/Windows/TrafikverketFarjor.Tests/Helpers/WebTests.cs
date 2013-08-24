@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -52,21 +54,28 @@ namespace TrafikverketFarjor.Tests.Helpers
 
         public static IWebDriver GetWebDriver(string browserName)
         {
-            switch (browserName)
+            if (browserName == null) throw new ArgumentNullException("browserName");
+            if (string.IsNullOrWhiteSpace(browserName)) throw new ArgumentException("BrowserName cannot be null, empty or whitespace.");
+
+            browserName = browserName.Trim();
+
+            var webdriverFactories = new Dictionary<string, Func<IWebDriver>>
+                {
+                    {Chrome, () => new ChromeDriver()},
+
+                    {Firefox, () => new FirefoxDriver()},
+
+                    {"IE", () => new InternetExplorerDriver()},
+                    {"InternetExplorer", () => new InternetExplorerDriver()},
+                    {InternetExplorer, () => new InternetExplorerDriver()},
+
+                    {Safari, () => new SafariDriver()}
+                };
+
+            foreach (var webdriverFactory in webdriverFactories)
             {
-                case Chrome:
-                    return new ChromeDriver();
-
-                case Firefox:
-                    return new FirefoxDriver();
-
-                case "IE":
-                case "InternetExplorer":
-                case InternetExplorer:
-                    return new InternetExplorerDriver();
-
-                case Safari:
-                    return new SafariDriver();
+                if (webdriverFactory.Key.Equals(browserName, StringComparison.InvariantCulture))
+                    return webdriverFactory.Value();
             }
 
             throw new ArgumentOutOfRangeException("browserName", browserName, "Not recognized.");
